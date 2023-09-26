@@ -1,3 +1,4 @@
-console.log("it's work again");
-console.log("it's work again");
-console.log("it's work again");
+import "./style.css";
+import createMainPage from "./main_page";
+
+createMainPage();

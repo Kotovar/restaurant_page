@@ -5,7 +5,8 @@ module.exports = {
   entry: "./src/index.js",
   plugins: [
     new HtmlWebpackPlugin({
-      title: "Output Management",
+      template: "./src/index.html",
+      hash: true,
     }),
   ],
   output: {
@@ -13,4 +14,17 @@ module.exports = {
     path: path.resolve(__dirname, "dist"),
     clean: true,
   },
+  module: {
+    rules: [
+      {
+        test: /\.css$/i,
+        use: ["style-loader", "css-loader"],
+      },
+    ],
+  },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: "./src/index.html",
+    }),
+  ],
 };

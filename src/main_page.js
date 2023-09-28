@@ -1,20 +1,6 @@
 export default function createMainPage() {
-  let content = document.getElementById("content");
-  //настройка заголовка header
-  let header = document.createElement("header");
-  let headerText = ["Home", "Menu", "About"];
-  for (let i = 0; i < headerText.length; i++) {
-    let div = document.createElement("div");
-    let a = document.createElement("a");
-    a.href = "";
-    a.textContent = headerText[i];
-    header.appendChild(div);
-    div.appendChild(a);
-  }
-  content.appendChild(header);
-
   //настройка основного раздела main
-  let main = document.createElement("main");
+  let main = document.querySelector("main");
   let pMain = document.createElement("h1");
   pMain.textContent = "Fish restaurant 'Underwater gourmet'";
   main.appendChild(pMain);
@@ -38,11 +24,4 @@ export default function createMainPage() {
     main.appendChild(div);
   }
   content.appendChild(main);
-
-  //настройка нижнего раздела footer
-  let footer = document.createElement("footer");
-  let p = document.createElement("p");
-  p.textContent = "Underwater gourmet © 2023 | All Rights Reserved";
-  footer.appendChild(p);
-  content.appendChild(footer);
 }

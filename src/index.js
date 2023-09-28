@@ -1,16 +1,35 @@
 import "./style.css";
 import createMainPage from "./main_page";
 import createMenuPage from "./menu";
+import createAboutPage from "./about";
+export let main = document.createElement("main");
 
-top();
-//createMainPage();
-createMenuPage();
-//bottom();
+let header = top();
+createMainPage();
+bottom();
+
+// Основная функция переключения страниц
+header.addEventListener("click", function (e) {
+  if (e.target.tagName === "A") {
+    main.innerHTML = "";
+    e.preventDefault();
+    switch (e.target.id) {
+      case "Home":
+        createMainPage();
+        break;
+      case "Menu":
+        createMenuPage();
+        break;
+      case "About":
+        createAboutPage();
+        break;
+    }
+  }
+});
 
 //создание общей верхней и нижней части сайта
 function top() {
   let content = document.getElementById("content");
-
   let header = document.createElement("header");
   let headerText = ["Home", "Menu", "About"];
   for (let i = 0; i < headerText.length; i++) {
@@ -18,12 +37,13 @@ function top() {
     let a = document.createElement("a");
     a.href = "";
     a.textContent = headerText[i];
+    a.setAttribute("id", headerText[i]);
     header.appendChild(div);
     div.appendChild(a);
   }
   content.appendChild(header);
-  //   let main = document.createElement("main");
-  //   content.appendChild(main);
+  content.appendChild(main);
+  return header;
 }
 
 function bottom() {

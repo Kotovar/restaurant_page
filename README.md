@@ -3,7 +3,7 @@
 
 # restaurant_page
 
-restaurant_page is a web app that displays a simple website for a fictional restaurant. You can see the home page, the menu page, and the about page by clicking on the tabs on the top. The app is built with JavaScript and webpack.
+restaurant_page is a web app that displays a simple website for a fictional restaurant. You can see the home page, the menu page, and the about page by clicking on the tabs on the top. Here I created a single page restaurant application that dynamically generates content on the page using JavaScript.
 
 ## How to use
 
@@ -20,11 +20,21 @@ To use restaurant_page, you need to have Node.js and npm installed on your syste
 
 -webpack
 
-## How it works
+open the index.html file in your browser
 
-restaurant_page uses HTML, CSS and JavaScript. It uses webpack to bundle the files and modules. 
+## Technologies
 
-The main logic of the app is in the src directory
+To create this project I used the following technologies:
+
+HTML
+
+CSS
+
+JavaScript
+
+webpack
+
+npm
 
 ## Credits
 
